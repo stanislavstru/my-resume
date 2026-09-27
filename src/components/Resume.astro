@@ -6,22 +6,25 @@ const url = new URL(Astro.url);
 const avatarParameter = url.searchParams.get("avatar");
 ---
 
-<div class="max-w-3xl mx-auto my-10 bg-white p-8 rounded-lg">
+<div
+  class="max-w-3xl mx-auto sm:my-10 bg-white px-5 py-8 sm:p-8 sm:rounded-lg text-base sm:text-sm max-sm:leading-relaxed"
+>
   <div class="grid grid-cols-8 gap-4">
-    <div class="col-span-6">
+    <div class="col-span-8 sm:col-span-6">
       <section>
         <div class="text-2xl font-semibold">Stas Strugovshchikov</div>
-        <div>
-          Frontend Developer. I am a permanent resident and do not require, nor
-          will ever require, visa sponsorship.
+        <div class="text-base">
+          Software Engineer | Solutions Architect | 10+ years of experience
         </div>
-        <div class="text-sm mt-2">Orlando, FL, 🇺🇸 United States</div>
+        <div class="mt-2">
+          Orlando, Florida, 🇺🇸 USA · Open to relocation
+        </div>
       </section>
 
       <section class="mt-3">
-        <p class="text-sm mt-1">📞 +1 (786) 325 4891</p>
-        <p class="text-sm mt-1">✉️ stanislav.stru@gmail.com</p>
-        <div class="flex gap-3 divide-x divide-gray-500 mt-1 text-sm">
+        <p class="mt-1">📞 +1 (786) 325 4891</p>
+        <p class="mt-1">✉️ stanislav.stru@gmail.com</p>
+        <div class="flex gap-3 divide-x divide-gray-500 mt-1">
           <span class="pr-3">
             🔗 <a
               href="https://www.linkedin.com/in/strugovshchikov"
@@ -41,133 +44,280 @@ const avatarParameter = url.searchParams.get("avatar");
     </div>
     {
       avatarParameter && (
-        <div class="col-span-2">
+        <div class="col-span-8 sm:col-span-2 order-first sm:order-none">
           <Image
             src={avatar}
             alt="Stanislav Strugovshchikov"
-            class="rounded-lg"
+            class="rounded-lg w-24 sm:w-auto"
           />
         </div>
       )
     }
   </div>
 
-  <section class="mt-5">
-    <p class="text-sm">
-      Highly skilled and driven Front-end developer with 10+ years of experience
-      in managing web application development with server logic, utilizing
-      creating responsive & user-friendly designs. Proven expertise in building
-      AI-powered applications in collaborating with cross-functional teams,
-      integrating LLM-based solutions, and developing intelligent automation
-      tools.
+  <section class="mt-6 sm:mt-5">
+    <p>
+      Full Stack Engineer with 10+ years of experience building web and mobile
+      products end to end, from React and Next.js frontends to Python (FastAPI),
+      Node.js and PHP backends. Currently working on a cross-platform React
+      Native app with a focus on real-device performance: profiling, list
+      virtualization and smooth navigation on low-end Android. Hands-on with AI
+      in production: integrated GPT content generation with deduplication,
+      built LLM-driven marketing tools at a Y Combinator-backed startup, and
+      trained custom models. Strong in multi-user system architecture,
+      including role-based access and OAuth. Delivered projects for marketing
+      platforms, banks, streaming services and e-commerce. I build products
+      that are fast, scalable and genuinely easy to use.
     </p>
   </section>
 
-  <section class="mt-4">
+  <section class="mt-8 sm:mt-4">
+    <h2 class="font-semibold text-xl">Skills</h2>
+    <ul class="list-disc ml-5 sm:ml-6 mt-1 space-y-1.5 sm:space-y-0">
+      <li>
+        <strong>Languages:</strong> TypeScript, JavaScript, Python, PHP, HTML, CSS
+      </li>
+      <li>
+        <strong>Frontend:</strong> React, Next.js, Redux, Redux-Saga, React Query,
+        SWR, Tailwind CSS, Storybook etc.
+      </li>
+      <li>
+        <strong>Mobile:</strong> React Native, Ionic
+      </li>
+      <li>
+        <strong>Backend:</strong> Node.js, FastAPI, Django, Laravel, Symfony, Yii2,
+        Moleculer, WebSockets, Socket.IO, Drizzle ORM, io-ts, etc.
+      </li>
+      <li>
+        <strong>Databases:</strong> PostgreSQL, MySQL, MongoDB, Redis
+      </li>
+      <li>
+        <strong>AI / LLM:</strong> OpenAI API (GPT-4/5), Anthropic Claude API, Meta
+        Llama (self-hosted, fine-tuning), Hugging Face, Ollama, vLLM, LLM content
+        generation pipelines, deduplication, custom model training
+      </li>
+      <li>
+        <strong>Architecture & Security:</strong> Microservices, Monorepo, REST API,
+        GraphQL, OAuth 2.0, JWT, Iron Session, Role-based access control
+      </li>
+      <li>
+        <strong>Testing:</strong> Jest, Cypress, Playwright
+      </li>
+      <li>
+        <strong>DevOps & Infrastructure:</strong> Terraform, Infrastructure as Code
+        (IaC), Docker, AWS (S3), Google Cloud Platform (GCP), Vercel, Firebase,
+        CI/CD, Git, Webpack, Babel, ESLint, Prettier
+      </li>
+      <li>
+        <strong>Design:</strong> Figma, Responsive layout, UI/UX
+      </li>
+    </ul>
+  </section>
+
+  <section class="mt-8 sm:mt-4">
     <h2 class="font-semibold text-xl">Experience</h2>
 
-    <div class="ml-3 mt-1 text-sm">
+    <div class="sm:ml-3 mt-1">
       <div class="mt-2">
-        <h3 class="text-lg font-semibold">Frontend Developer</h3>
+        <h3 class="text-lg font-semibold">
+          Full Stack Engineer, Software Architect
+        </h3>
+        <a class="inline-block" href="https://www.ivigee.com/" target="_blank"
+          ><h3 class="text-md font-bold">iVigee</h3></a
+        >
+        <p class="text-gray-600">
+          July 2025 – Present · Burlington, Massachusetts
+        </p>
+        <p class="mt-1">Biotechnology Research.</p>
+        <ul class="list-disc ml-5 sm:ml-6 mt-2 space-y-1.5 sm:space-y-0">
+          <li>
+            Designed the application architecture for handling sensitive
+            biotech data, with role-based access control, secure authentication
+            and strict data isolation.
+          </li>
+          <li>
+            Built the team's AI-assisted development workflow end to end: UI
+            generation from Figma designs via MCP, governed by a documented
+            system of AI skills and rules that describes every process in the
+            application.
+          </li>
+          <li>
+            Set up a multi-stage code quality pipeline with strict linting, type
+            checking and automated checks at every step, from local commits to
+            CI.
+          </li>
+          <li>
+            Mentored engineers and led code reviews, owning PR review standards
+            across the team.
+          </li>
+          <li>
+            Designed a scalable frontend architecture with TypeScript and a
+            modular component structure.
+          </li>
+          <li>
+            Optimized performance with server-side rendering (SSR) and dynamic
+            rendering strategies.
+          </li>
+          <li>
+            Built the API layer and data fetching strategy with controlled
+            caching.
+          </li>
+          <li>
+            Partnered with backend and business teams to deliver secure internal
+            tools for biotech research.
+          </li>
+        </ul>
+      </div>
+
+      <div class="mt-8 sm:mt-4">
+        <h3 class="text-lg font-semibold">Software Architect (Pet project)</h3>
+        <a class="inline-block" href="https://copyext.com/" target="_blank"
+          ><h3 class="text-md font-bold">NeptoLab</h3></a
+        >
+        <p class="text-gray-600">February 2025 – March 2026 · Tampa, Florida</p>
+        <p class="mt-1">
+          AI Content Generation Platform. Primary contributor (100+ commits) to
+          an AI-powered content creation and publishing platform.
+        </p>
+        <ul class="list-disc ml-5 sm:ml-6 mt-2 space-y-1.5 sm:space-y-0">
+          <li>
+            Built an AI content-generation system on GPT-4/5 with image
+            generation, trend extraction and duplicate-content detection.
+          </li>
+          <li>
+            Integrated publishing to Telegram, LinkedIn, WordPress and other
+            with scheduling and queue processing on cron and Supabase Edge
+          </li>
+          <li>
+            Architected a cross-platform mobile app from scratch (React Native,
+            Expo, TypeScript) as a Turborepo/pnpm monorepo with a shared UI kit
+            and a typed API client generated from the backend OpenAPI spec;
+            authored 90%+ of commits.
+          </li>
+          <li>
+            Built the mobile data layer: TanStack Query with tiered caching and
+            offline support, single-flight token refresh, idempotency keys,
+            secure token storage, and forms on React Hook Form + Zod.
+          </li>
+          <li>
+            Delivered core flows: SMS sign-in, multi-step sign-up, onboarding,
+            feeds, post with photo cropping, profiles and invite deep links.
+          </li>
+          <li>
+            Built a design system from Figma via Figma MCP: design tokens, 14
+            components and 120+ icons, documented in Storybook.
+          </li>
+          <li>
+            Provisioned production infrastructure with Terraform/OpenTofu:
+            managed Kubernetes with autoscaling, PostgreSQL replicated across 3
+            availability zones, Redis/Valkey, Kafka (KRaft), OpenSearch and
+            S3-compatible storage.
+          </li>
+          <li>
+            Secured the platform with private-network-only data stores,
+            Terraform-generated secrets in a cloud secrets manager,
+            least-privilege IAM, SSO (OIDC + oauth2-proxy) and RBAC-limited CI
+            access.
+          </li>
+          <li>
+            Deployed services with Helm, Kustomize and GitLab CI; cut
+            infrastructure costs by consolidating services behind a shared load
+            balancer.
+          </li>
+        </ul>
+      </div>
+
+      <div class="mt-8 sm:mt-4">
+        <h3 class="text-lg font-semibold">
+          Full Stack Engineer, Software Architect
+        </h3>
         <a class="inline-block" href="https://www.criya.co/" target="_blank"
           ><h3 class="text-md font-bold">Criya</h3></a
         >
-        <p class="text-gray-600">June 2022 to February 2025</p>
-        <ul class="list-disc ml-6 mt-2">
+        <p class="text-gray-600">June 2022 – May 2025 · San Jose, California</p>
+        <p class="mt-1">
+          Criya AI, Y Combinator and venture backed AI startup is an intelligent
+          content system.
+        </p>
+        <ul class="list-disc ml-5 sm:ml-6 mt-2 space-y-1.5 sm:space-y-0">
           <li>
-            The project was migrated from Ruby to Next.js, resulting in a
-            significant performance improvement and enhanced search engine
-            rankings.
+            Designed application architecture from scratch. Migrated Ruby app to
+            Next.js - improved performance & SEO.
           </li>
           <li>
-            Integrated LLM mechanisms and AI Agent workflows to enable
-            end-to-end personalized AI-driven marketing campaigns in under 60
-            seconds
+            Integrated LLM-based workflows for AI-driven marketing. Enabled users
+            to generate content based on existing companies through a
+            step-by-step questionnaire system and a knowledge base capable of
+            storing virtually any type of data.
           </li>
           <li>
-            Successfully integrated 15 distinct third-party services, including
-            payment processors, analytics platforms, and authentication
-            providers.
+            Championed AI adoption, making Criya one of the first YC startups to
+            deploy large-scale LLM workflows in production.
+          </li>
+          <li>Developed a custom page builder with a user-friendly structure.</li>
+          <li>
+            Integrated numerous third-party services (payments, analytics,
+            auth), ensuring scalability and reliability.
           </li>
           <li>
-            Designed a monorepo-based architecture with modular application
-            separation. Established a reusable codebase, significantly improving
-            project performance.
+            Built NX monorepo architecture, reducing build times by 50% and
+            simplifying collaboration across teams.
           </li>
           <li>
-            Developed a comprehensive style library, which was subsequently
-            utilized in all new development projects. The UX/UI design team
-            supplied Figma styles and designs.
+            Developed a style library based on pure React components and
+            Tailwind CSS.
+          </li>
+          <li>
+            Developed cross-platform React Native app for quick content
+            creation.
+          </li>
+          <li>
+            Provided mentorship and technical leadership to junior developers.
           </li>
         </ul>
       </div>
 
-      <div class="mt-4">
-        <h3 class="text-lg font-semibold">Frontend Developer</h3>
+      <div class="mt-8 sm:mt-4">
+        <h3 class="text-lg font-semibold">
+          Lead Frontend Engineer, Software Architect
+        </h3>
         <a class="inline-block" href="https://dzsystems.ru/en/" target="_blank"
           ><h3 class="text-md font-bold">DZ Systems</h3></a
         >
-        <p class="text-gray-600">February 2021 - June 2022</p>
-        <ul class="list-disc ml-6 mt-2">
+        <p class="text-gray-600">April 2017 – June 2022</p>
+        <p class="mt-1">
+          Leading IT services provider delivering scalable web platforms and
+          digital transformation solutions across multiple industries. Worked
+          across several high-impact projects in roles ranging from Frontend
+          Engineer to Software Architect.
+        </p>
+        <ul class="list-disc ml-5 sm:ml-6 mt-2 space-y-1.5 sm:space-y-0">
           <li>
-            Developed a social network for business professionals and
-            implemented a WebSockets-based chat system for negotiation
-            coordination, reducing the process to just 3 steps globally
-          </li>
-          <li>Built microservices architecture for high scalability.</li>
-          <li>Localized the project into 5 languages.</li>
-        </ul>
-      </div>
-
-      <div class="mt-4">
-        <h3 class="text-lg font-semibold">Software Engineer</h3>
-        <a
-          class="inline-block"
-          href="https://pro.myseldon.com/en/promo"
-          target="_blank"><h3 class="text-md font-bold">Seldon Pro</h3></a
-        >
-        <p class="text-gray-600">January 2020 - February 2021</p>
-        <ul class="list-disc ml-6 mt-2">
-          <li>
-            Migrated legacy projects from jQuery to Next.js, increasing
-            efficiency by 200%.
+            Built a professional social network with a chat system, cutting
+            global negotiation steps from 5 to 3.
           </li>
           <li>
-            Developed configuration rule for collaboration by creating
-            standardized processes and guidelines, resulting in 3 times increase
-            in development speed
+            Led architectural decisions and code reviews, ensuring clean,
+            maintainable, and scalable solutions
           </li>
+          <li>Migrated legacy projects from jQuery to Next.js.</li>
           <li>
-            Introduced modern CSS frameworks to enhance styling and
-            maintainability.
-          </li>
-          <li>
-            Collaborated with C# developers and Front-end team by coordinating
-            project requirements and troubleshooting issues, resulting in
-            improved system performance
+            Created standardized collaboration guidelines, which standardized
+            processes and guidelines, resulting in 3 times increase in
+            development speed. Introduced modern CSS frameworks to enhance
+            styling and maintainability.
           </li>
           <li>
             Optimized PostgreSQL database performance by 37% without changing
-            the number of queried parameters
-          </li>
-        </ul>
-      </div>
-
-      <div class="mt-4">
-        <h3 class="text-lg font-semibold">Full-Stack Developer</h3>
-        <a class="inline-block" href="https://mebelidomanet.ru/" target="_blank"
-          ><h3 class="text-md font-bold">Mebelidomanet</h3></a
-        >
-
-        <p class="text-gray-600">April 2017 - May 2020</p>
-        <ul class="list-disc ml-6 mt-2">
-          <li>
-            I have successfully developed several big marketplaces, including a
-            market place in Russia, namely a core platform on which 147 online
-            shops were built. Used Yii2.
+            the number of queried parameters.
           </li>
           <li>
-            Collaborated on designing a structure for fast database queries.
+            Drove modernization of the tech stack, transforming legacy products
+            into high-performance applications
+          </li>
+          <li>
+            Played a key role in scaling the platform to support 147 shops,
+            managing both frontend and backend complexity. Used Yii2.
           </li>
           <li>
             Our team worked on SEO optimization, resulting in over 43% of our
@@ -175,45 +325,98 @@ const avatarParameter = url.searchParams.get("avatar");
           </li>
         </ul>
       </div>
+
+      <div class="mt-8 sm:mt-4">
+        <h3 class="text-lg font-semibold">
+          Full-Stack Engineer, Software Architect
+        </h3>
+        <a class="inline-block" href="https://mebelidomanet.ru/" target="_blank"
+          ><h3 class="text-md font-bold">Mebelidomanet</h3></a
+        >
+        <p class="text-gray-600">October 2021 – June 2022</p>
+        <p class="mt-1">
+          Order-management platform for a multi-channel furniture retailer.
+        </p>
+        <ul class="list-disc ml-5 sm:ml-6 mt-2 space-y-1.5 sm:space-y-0">
+          <li>
+            Built an order-management system (OMS) that brings orders from 4
+            marketplaces and 1,700+ websites into one workflow. It has processed
+            390K+ website orders and 90K+ marketplace orders.
+          </li>
+          <li>
+            Automated inventory sync: prices and stock levels are imported from
+            Google Sheets and pushed to warehouses in background jobs, with a
+            dry-run mode for safe rollout.
+          </li>
+          <li>
+            Added full-text order search with Typesense and analytics dashboards
+            showing sales by platform, city and month.
+          </li>
+          <li>
+            Designed asynchronous processing on a Redis queue with 30+ scheduled
+            jobs and systemd workers. Deployed with CI/CD on GitHub Actions to
+            separate dev and production environments.
+          </li>
+          <li>
+            Modernized the frontend: React + TypeScript widgets inside Yii2, a
+            move from Parcel to Vite, and CSS Modules with a reusable UI
+            component layer.
+          </li>
+          <li>
+            Automated the management domains through the Cloudflare and Beget
+            APIs, including SSL certificate expiry tracking
+          </li>
+        </ul>
+      </div>
+
+      <div class="mt-8 sm:mt-4">
+        <h3 class="text-lg font-semibold">Wordpress Engineer</h3>
+        <a
+          class="inline-block"
+          href="https://k3-tent.com/developer-of-k3-tent/"
+          target="_blank"><h3 class="text-md font-bold">GeoS Center</h3></a
+        >
+        <p class="text-gray-600">May 2015 – August 2017</p>
+        <ul class="list-disc ml-5 sm:ml-6 mt-2 space-y-1.5 sm:space-y-0">
+          <li>
+            Developed a WordPress plugin with multifunctional admin panel (order
+            management, analytics, third-party integrations).
+          </li>
+          <li>
+            Developed and localized 11 WordPress websites, each dedicated to a
+            specific software product of the company.
+          </li>
+          <li>
+            Gained hands-on experience with CMS customization, building
+            solutions adopted across the company’s product line.
+          </li>
+        </ul>
+      </div>
     </div>
   </section>
 
-  <section class="mt-4">
-    <h2 class="font-semibold text-xl">Skills</h2>
-    <ul class="list-disc ml-6 mt-1 text-sm">
-      <li>
-        <strong>Frontend:</strong> TypeScript, React, Next.js, Astro.js, Redux, TailwindCSS,
-        Microservices, NX, WebSockets, REST API, Responsive Layout (CSS Grid, Flexbox)
-      </li>
-      <li>
-        <strong>Mobile:</strong> Ionic, React Native, Capacitor
-      </li>
-      <li>
-        <strong>DevOps & Tools:</strong> Nginx, Unix, Docker, AWS, Firebase, Vercel,
-        Jenkins
-      </li>
-      <li>
-        <strong>AI & Integrations:</strong> OpenAI API, ChatGPT, Stripe API, Google
-        API and etc.
-      </li>
-      <li>
-        <strong>Other:</strong> Node.js, Express, NestJS, PHP (Yii2, Symfony), PostgreSQL,
-        MongoDB, MySQL, GraphQL, Wordpress
-      </li>
-    </ul>
+  <section class="mt-8 sm:mt-4">
+    <p>
+      Startup-minded engineer who has shipped products across many early-stage
+      projects, finding fast, practical solutions under tight timelines. I
+      follow AI developments daily and turn new findings into working
+      architectural decisions. Extensive experience mentoring engineers and
+      building team processes, from code review standards to AI-assisted
+      development workflows.
+    </p>
   </section>
 
-  <section class="mt-4">
+  <section class="mt-8 sm:mt-4">
     <h2 class="font-semibold text-xl">Education</h2>
-    <p class="ml-3 mt-1 text-sm">
+    <p class="sm:ml-3 mt-1">
       <strong
-        >Bachelor of Science in Computer security | State Technical University,
-        Russia</strong
+        >Master of Science in Computer Science | State Technical University
+        n.a. R.E. Alekseev</strong
       > (2007 - 2012)
     </p>
   </section>
 
-  <section class="mt-6 text-center text-sm">
+  <section class="mt-8 sm:mt-6 text-center">
     <p>🚀 Open to new opportunities and collaborations!</p>
   </section>
 </div>
